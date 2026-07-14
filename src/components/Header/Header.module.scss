@@ -1,0 +1,177 @@
+@use "../../styles/variables.scss" as *;
+.header {
+  margin-bottom: 28px;
+  padding: 18px 24px;
+  background: $header-bg;
+  backdrop-filter: blur(8px);
+  border: 4px solid $black;
+  box-shadow: 8px 8px 0 $black;
+  border-radius: 8px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 0 auto 25px;
+  padding: 16px 22px;
+  background: $another-bg;
+  backdrop-filter: blur(10px);
+  border: 4px solid $black;
+  box-shadow: 8px 8px 0 $black;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hearts {
+  display: flex;
+  gap: 10px;
+  margin-left: 5px;
+  font-size: 34px;
+  text-shadow:
+    2px 2px $black,
+    0 0 10px $heart;
+}
+
+.timer {
+  min-width: 130px;
+  margin-left: 5px;
+  padding: 10px 18px;
+  text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  color: $yellow;
+  background: $bg-timer;
+  border: 3px solid $black;
+  box-shadow: 4px 4px 0 $black;
+  text-shadow: 2px 2px $black;
+}
+
+.question {
+  margin-top: 18px;
+  text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  color: $white;
+  line-height: 1.6;
+  text-shadow: 2px 2px $black;
+}
+
+.danger {
+  background: $cute-red;
+  color: $white;
+  animation: pulse .8s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .hearts {
+    font-size: 28px;
+  }
+
+  .timer {
+    margin-left: 5px;
+  }
+
+  .question {
+    font-size: 12px;
+  }
+
+}
+.full {
+  color: $red;
+}
+
+.empty {
+  color: $grey;
+}
+
+.backButton {
+  padding: 0px 15px;
+  background: $cute-yellow;
+  border: 4px solid $black;
+  box-shadow: 5px 5px 0 $black;
+  font-family: "Press Start 2P";
+  font-size: 30px;
+  cursor: pointer;
+  transition: .15s;
+  color: $black;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+}
+
+.backButton:active {
+  transform: translateY(3px);
+  box-shadow: 2px 2px 0 $black;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category {
+  font-family: "Press Start 2P";
+  font-size: 13px;
+  color: $yellow;
+  text-align: center;
+  text-shadow: 2px 2px $black;
+}
+
+.progress {
+  padding: 8px 14px;
+  color: $cyan;
+  font-family: "Press Start 2P";
+  font-size: 12px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hearts {
+  display: flex;
+  gap: 8px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category {
+  font-family: "Press Start 2P";
+  font-size: 12px;
+}
+
+.progress {
+  font-family: "Press Start 2P";
+  font-size: 12px;
+}
+
+.timer {
+  margin-left: auto;
+}

@@ -1,0 +1,40 @@
+@use "../../styles/variables.scss" as *;
+.options {
+    width: min(750px, 100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.option {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+}
+
+.correct {
+    background: $correct !important;
+    color: $text-color !important;
+}
+
+.wrong {
+    background: $wrong !important;
+    color: $text-color !important;
+}
+
+.disabledOption {
+    background: $disabled !important;
+    color: $disabled-text !important;
+    opacity: .6;
+}
+
+@media (max-width:700px){
+    .options{
+        grid-template-columns:1fr;
+    }
+}

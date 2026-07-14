@@ -1,0 +1,94 @@
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  background: $bg-dark;
+  color: $text-color;
+  font-family: "Pixelify Sans", sans-serif;
+  overflow-x: hidden;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  transition: .15s;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.pixel-title {
+  font-family: "Press Start 2P", cursive;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $black;
+}
+
+::selection {
+  background: $yellow;
+  color: $black;
+}

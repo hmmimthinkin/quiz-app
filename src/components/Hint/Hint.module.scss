@@ -1,0 +1,13 @@
+@use "../../styles/variables.scss" as *;
+.hints {
+    position: absolute;
+    right: 0px;
+    top: 15%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.hintButtons{
+    background-color: $more-cyan;
+}

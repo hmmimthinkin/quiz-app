@@ -1,0 +1,38 @@
+@use "../../styles/variables.scss" as *;
+.title {
+    margin: 20px 0 15px;
+    font-family: "Press Start 2P";
+    font-size: 26px;
+    text-shadow: 4px 4px $black;
+}
+
+.counter {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $yellow;
+}
+
+.imageCard {
+    width: min(500px, 100%);
+    padding: 18px;
+    background: $bg-timer;
+    border: 5px solid $black;
+    box-shadow: 8px 8px 0 $black;
+    margin-bottom: 25px;
+}
+
+.image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border: 4px solid $black;
+    image-rendering: pixelated;
+}
+
+.question {
+    margin: 25px 0;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 22px;
+}

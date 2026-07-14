@@ -1,0 +1,230 @@
+@use "../../styles/variables.scss" as *;
+
+.container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top, $home-bg 0%, transparent 40%),
+    linear-gradient(180deg,
+      $home-bg-first,
+      $home-bg-second,
+      $home-bg-third
+    );
+  color: $white;
+}
+
+.recordCard {
+  position: relative;
+  z-index: 2;
+  width: min(620px, 90%);
+  padding: 20px;
+  margin-bottom: 45px;
+  border: 4px solid $black;
+  backdrop-filter: blur(8px);
+  box-shadow: 8px 8px 0 $black;
+  font-family:"pixelify-sans";
+}
+
+.recordCard h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: $yellow;
+  font-family: "Press Start 2P";
+  font-size: 15px;
+}
+
+.recordRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.games {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+
+.card {
+  &:first-child {
+    background: linear-gradient(180deg,$plant-first,$planet-second);
+    border-color: $more-cyan;
+    color:$more-cyan;
+  }
+}
+
+.card:last-child {
+  background: linear-gradient(180deg,$country-first,$country-second);
+  border-color: $cyan;
+  color: $cyan;
+}
+.card {
+  width: 290px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  border: 5px solid $white;
+  box-shadow: 10px 10px $black;
+  transition: .2s;
+}
+
+
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 12px 12px 0 $black;
+}
+
+.card:active {
+  transform: translateY(4px);
+  box-shadow: 3px 3px 0 $black;
+}
+
+.icon {
+  font-size: 76px;
+  transition: .25s;
+}
+
+.card:hover .icon {
+  transform: rotate(-8deg) scale(1.12);
+}
+
+.card span {
+  font-family: "Press Start 2P";
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.logout {
+  padding: 18px 42px;
+  background: $red-pink;
+  color: $black;
+  border: 5px solid $reddd;
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 8px 8px $black;
+  transition: .2s;
+  position: relative;
+  z-index: 2;
+}
+
+.logout:hover {
+  transform: translateY(-4px);
+}
+
+.logout:active {
+  transform: translateY(4px);
+  box-shadow: 3px 3px $black;
+}
+
+.stars,
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient($white 1px, transparent 1px);
+  animation: twinkle linear infinite;
+}
+
+.stars {
+  background-size: 40px 40px;
+  opacity: .9;
+  animation-duration: 5s;
+}
+
+.stars::before {
+  background-size: 70px 70px;
+  opacity: .6;
+  animation-duration: 9s;
+}
+
+.stars::after {
+  background-size: 110px 110px;
+  opacity: .3;
+  animation-duration: 13s;
+}
+
+.logo{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:20px;
+  font-family:"Press Start 2P";
+  font-size:28px;
+}
+
+.logo span{
+  animation:float 1.5s ease-in-out infinite;
+}
+
+.logo span:nth-child(even){
+  animation-delay:.2s;
+}
+
+.logo span:nth-child(1){color:$cute-red;}
+.logo span:nth-child(2){color:$cute-yellow;}
+.logo span:nth-child(3){color:$cute-green;}
+.logo span:nth-child(4){color:$cute-dark-blue;}
+.logo span:nth-child(6){color:$cute-orange;}
+.logo span:nth-child(7){color:$cute-purple;}
+.logo span:nth-child(8){color:$cute-dark-green;}
+.logo span:nth-child(9){color:$cute-blue;}
+.logo span:nth-child(10){color:$cute-pink;}
+
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+@keyframes twinkle{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-40px);
+  }
+}
+
+@media (max-width: 700px) {
+  .games {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 220px;
+    height: 220px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .recordCard {
+    width: 100%;
+  }
+}

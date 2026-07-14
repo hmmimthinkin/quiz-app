@@ -1,0 +1,100 @@
+@use "../../styles/variables.scss" as *;
+.background {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    $bg-first 0%,
+    $bg-second 50%,
+    $bg-third 100%
+  );
+}
+.stars,
+.stars::before,
+.stars::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient($star 1px, transparent 1px);
+  animation: twinkle linear infinite;
+}
+
+.stars {
+  background-size: 40px 40px;
+  opacity: .9;
+  animation-duration: 5s;
+}
+
+.stars::before {
+  background-size: 70px 70px;
+  opacity: .6;
+  animation-duration: 9s;
+}
+
+.stars::after {
+  background-size: 110px 110px;
+  opacity: .3;
+  animation-duration: 13s;
+}
+
+.container{
+  position:relative;
+  z-index:10;
+  width:440px;
+  padding:45px;
+  background:$bg-fourth;
+  border:5px solid $black;
+  box-shadow:10px 10px 0 $black;
+  text-align:center;
+}
+
+.logo{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:20px;
+  font-family:"Press Start 2P";
+  font-size:28px;
+}
+
+.logo span{
+  animation:float 1.5s ease-in-out infinite;
+}
+
+.logo span:nth-child(even){
+  animation-delay:.2s;
+}
+
+.logo span:nth-child(1){color:$cute-red;}
+.logo span:nth-child(2){color:$cute-yellow;}
+.logo span:nth-child(3){color:$cute-green;}
+.logo span:nth-child(4){color:$cute-dark-blue}
+.logo span:nth-child(6){color:$cute-orange;}
+.logo span:nth-child(7){color:$cute-purple;}
+.logo span:nth-child(8){color:$cute-dark-green;}
+.logo span:nth-child(9){color:$cute-blue;}
+.logo span:nth-child(10){color:$cute-pink;}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+@keyframes twinkle{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-40px);
+  }
+}

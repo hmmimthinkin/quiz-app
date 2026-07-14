@@ -1,0 +1,52 @@
+@use "../../styles/variables.scss" as *;
+.button{
+    padding:16px;
+    border:4px solid $black;
+    font-family:"Press Start 2P";
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:6px 6px 0 $black;
+    transition:.15s;
+    color:$white;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.button:active{
+    transform:translateY(4px);
+    box-shadow:1px 1px 0 $black;
+}
+
+.button:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+    padding:16px;
+    transform:none;
+
+    box-shadow:6px 6px 0 $black;
+}
+.red{
+    background:$option-red;
+    color:$black;
+}
+
+.blue{
+    background:$option-blue;
+    color:$black;
+}
+
+.green{
+    background:$option-green;
+    color:$black;
+}
+
+.yellow{
+    background:$option-yellow;
+    color:$black;
+}
+
+.purple{
+    background:$purple;
+}

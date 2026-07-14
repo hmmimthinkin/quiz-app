@@ -1,0 +1,76 @@
+@use "../../styles/variables.scss" as *;
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: $bg-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  z-index: 9999;
+}
+
+.modal {
+  width: 430px;
+  padding: 35px;
+  background: $bg-fifth;
+  border: 5px solid $black;
+  box-shadow: 10px 10px 0 $black;
+  text-align: center;
+  animation: dropDown .45s cubic-bezier(.17,.84,.44,1);
+  color: $white;
+}
+
+.modal h2 {
+  font-family: "Press Start 2P";
+  margin-bottom: 25px;
+  color:$red;
+  text-shadow:3px 3px $black;
+}
+
+.modal p {
+  margin-bottom: 30px;
+  line-height: 1.7;
+  color: $yellow;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top:25px;
+    animation: fadeButtons .6s .2s both;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(-8px);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeButtons{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
