@@ -3,8 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
-import "@fontsource/press-start-2p";
-import "@fontsource/pixelify-sans";
+import "@fontsource/press-start-2p/index.css";
+import "@fontsource/pixelify-sans/index.css";
 import "./styles/global.scss";
 
 
